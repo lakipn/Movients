@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.lazarmilosavljevic.movients",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.6.1",
+    "applicationType": "monolith",
+    "baseName": "Movients",
+    "packageName": "com.lazarmilosavljevic.movients",
+    "packageFolder": "com/lazarmilosavljevic/movients",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YWI4NzZhMGVjYTFiZDQwN2U3NTI4YWYxNTgyM2I2ZTkxZjQ4ZjIzZDk3OGQwOGRjZTIzOWJhNDIxNTRhYThhNTBiZTA3MmY3ZjM3MmY3Y2I3Y2I4ZDg0ODNhZTFlZmVjNjI2NTUzMmUzZDE0NDM4ODNkNjY5MDFjZmRhYjRiMGE=",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "sr"
+    ]
+  }
+}
