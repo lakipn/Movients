@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="cast">
+            <h2><span jhiTranslate="movientsApp.cast.detail.title">Cast</span> {{cast.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="movientsApp.cast.name">Name</span></dt>
+                <dd>
+                    <span>{{cast.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="movientsApp.cast.characterName">Character Name</span></dt>
+                <dd>
+                    <span>{{cast.characterName}}</span>
+                </dd>
+                <dt><span jhiTranslate="movientsApp.cast.image">Image</span></dt>
+                <dd>
+                    <span>{{cast.image}}</span>
+                </dd>
+                <dt><span jhiTranslate="movientsApp.cast.imdb">Imdb</span></dt>
+                <dd>
+                    <span>{{cast.imdb}}</span>
+                </dd>
+                <dt><span jhiTranslate="movientsApp.cast.movie">Movie</span></dt>
+                <dd>
+                    <div *ngIf="cast.movieId">
+                        <a [routerLink]="['/movie', cast.movieId, 'view']">{{cast.movieTitle}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/cast', cast.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

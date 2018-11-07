@@ -1,0 +1,33 @@
+{
+    "movientsApp": {
+        "movie": {
+            "home": {
+                "title": "Movies",
+                "createLabel": "Kreiraj novi Movie",
+                "createOrEditLabel": "Kreirajte ili izmenite Movie"
+            },
+            "created": "Kreiran je novi Movie pod nazivom {{ param }}",
+            "updated": "Movie pod nazivom {{ param }} je ažuriran",
+            "deleted": "Movie pod nazivom {{ param }} je obrisan",
+            "delete": {
+                "question": "Da li ste sigurni da želite da obrišete Movie pod nazivom {{ id }}?"
+            },
+            "detail": {
+                "title": "Movie"
+            },
+            "imdbCode": "Imdb Code",
+            "title": "Title",
+            "slug": "Slug",
+            "year": "Year",
+            "rating": "Rating",
+            "runtime": "Runtime",
+            "description": "Description",
+            "youtube": "Youtube",
+            "language": "Language",
+            "cast": "Cast",
+            "images": "Images",
+            "torrents": "Torrents",
+            "genres": "Genres"
+        }
+    }
+}

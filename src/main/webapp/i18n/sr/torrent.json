@@ -1,0 +1,25 @@
+{
+    "movientsApp": {
+        "torrent": {
+            "home": {
+                "title": "Torrents",
+                "createLabel": "Kreiraj novi Torrent",
+                "createOrEditLabel": "Kreirajte ili izmenite Torrent"
+            },
+            "created": "Kreiran je novi Torrent pod nazivom {{ param }}",
+            "updated": "Torrent pod nazivom {{ param }} je ažuriran",
+            "deleted": "Torrent pod nazivom {{ param }} je obrisan",
+            "delete": {
+                "question": "Da li ste sigurni da želite da obrišete Torrent pod nazivom {{ id }}?"
+            },
+            "detail": {
+                "title": "Torrent"
+            },
+            "url": "Url",
+            "hash": "Hash",
+            "quality": "Quality",
+            "size": "Size",
+            "movie": "Movie"
+        }
+    }
+}

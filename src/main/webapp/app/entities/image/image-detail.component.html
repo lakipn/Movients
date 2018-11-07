@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="image">
+            <h2><span jhiTranslate="movientsApp.image.detail.title">Image</span> {{image.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="movientsApp.image.medium">Medium</span></dt>
+                <dd>
+                    <span>{{image.medium}}</span>
+                </dd>
+                <dt><span jhiTranslate="movientsApp.image.large">Large</span></dt>
+                <dd>
+                    <span>{{image.large}}</span>
+                </dd>
+                <dt><span jhiTranslate="movientsApp.image.type">Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'movientsApp.ImageType.' + image.type}}">{{image.type}}</span>
+                </dd>
+                <dt><span jhiTranslate="movientsApp.image.movie">Movie</span></dt>
+                <dd>
+                    <div *ngIf="image.movieId">
+                        <a [routerLink]="['/movie', image.movieId, 'view']">{{image.movieTitle}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/image', image.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

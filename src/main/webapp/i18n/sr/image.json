@@ -1,0 +1,24 @@
+{
+    "movientsApp": {
+        "image": {
+            "home": {
+                "title": "Images",
+                "createLabel": "Kreiraj novi Image",
+                "createOrEditLabel": "Kreirajte ili izmenite Image"
+            },
+            "created": "Kreiran je novi Image pod nazivom {{ param }}",
+            "updated": "Image pod nazivom {{ param }} je ažuriran",
+            "deleted": "Image pod nazivom {{ param }} je obrisan",
+            "delete": {
+                "question": "Da li ste sigurni da želite da obrišete Image pod nazivom {{ id }}?"
+            },
+            "detail": {
+                "title": "Image"
+            },
+            "medium": "Medium",
+            "large": "Large",
+            "type": "Type",
+            "movie": "Movie"
+        }
+    }
+}

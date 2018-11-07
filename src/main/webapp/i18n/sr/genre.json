@@ -1,0 +1,22 @@
+{
+    "movientsApp": {
+        "genre": {
+            "home": {
+                "title": "Genres",
+                "createLabel": "Kreiraj novi Genre",
+                "createOrEditLabel": "Kreirajte ili izmenite Genre"
+            },
+            "created": "Kreiran je novi Genre pod nazivom {{ param }}",
+            "updated": "Genre pod nazivom {{ param }} je ažuriran",
+            "deleted": "Genre pod nazivom {{ param }} je obrisan",
+            "delete": {
+                "question": "Da li ste sigurni da želite da obrišete Genre pod nazivom {{ id }}?"
+            },
+            "detail": {
+                "title": "Genre"
+            },
+            "name": "Name",
+            "movies": "Movies"
+        }
+    }
+}

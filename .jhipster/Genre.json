@@ -1,0 +1,27 @@
+{
+    "name": "Genre",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "movies",
+            "otherEntityName": "movie",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "genres"
+        }
+    ],
+    "changelogDate": "20181106214403",
+    "entityTableName": "genre",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

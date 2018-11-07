@@ -1,0 +1,33 @@
+{
+    "movientsApp": {
+        "movie": {
+            "home": {
+                "title": "Movies",
+                "createLabel": "Create a new Movie",
+                "createOrEditLabel": "Create or edit a Movie"
+            },
+            "created": "A new Movie is created with identifier {{ param }}",
+            "updated": "A Movie is updated with identifier {{ param }}",
+            "deleted": "A Movie is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Movie {{ id }}?"
+            },
+            "detail": {
+                "title": "Movie"
+            },
+            "imdbCode": "Imdb Code",
+            "title": "Title",
+            "slug": "Slug",
+            "year": "Year",
+            "rating": "Rating",
+            "runtime": "Runtime",
+            "description": "Description",
+            "youtube": "Youtube",
+            "language": "Language",
+            "cast": "Cast",
+            "images": "Images",
+            "torrents": "Torrents",
+            "genres": "Genres"
+        }
+    }
+}

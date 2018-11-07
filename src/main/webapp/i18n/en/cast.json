@@ -1,0 +1,25 @@
+{
+    "movientsApp": {
+        "cast": {
+            "home": {
+                "title": "Casts",
+                "createLabel": "Create a new Cast",
+                "createOrEditLabel": "Create or edit a Cast"
+            },
+            "created": "A new Cast is created with identifier {{ param }}",
+            "updated": "A Cast is updated with identifier {{ param }}",
+            "deleted": "A Cast is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cast {{ id }}?"
+            },
+            "detail": {
+                "title": "Cast"
+            },
+            "name": "Name",
+            "characterName": "Character Name",
+            "image": "Image",
+            "imdb": "Imdb",
+            "movie": "Movie"
+        }
+    }
+}

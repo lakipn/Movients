@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-cast-heading" jhiTranslate="movientsApp.cast.home.createOrEditLabel">Create or edit a Cast</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!cast.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="cast.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="movientsApp.cast.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                        [(ngModel)]="cast.name" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="movientsApp.cast.characterName" for="field_characterName">Character Name</label>
+                    <input type="text" class="form-control" name="characterName" id="field_characterName"
+                        [(ngModel)]="cast.characterName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="movientsApp.cast.image" for="field_image">Image</label>
+                    <input type="text" class="form-control" name="image" id="field_image"
+                        [(ngModel)]="cast.image" maxlength="1024"/>
+                    <div [hidden]="!(editForm.controls.image?.dirty && editForm.controls.image?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.image?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 1024 }">
+                        This field cannot be longer than 1024 characters.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="movientsApp.cast.imdb" for="field_imdb">Imdb</label>
+                    <input type="text" class="form-control" name="imdb" id="field_imdb"
+                        [(ngModel)]="cast.imdb" maxlength="512"/>
+                    <div [hidden]="!(editForm.controls.imdb?.dirty && editForm.controls.imdb?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.imdb?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 512 }">
+                        This field cannot be longer than 512 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="movientsApp.cast.movie" for="field_movie">Movie</label>
+                    <select class="form-control" id="field_movie" name="movie" [(ngModel)]="cast.movieId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="movieOption.id" *ngFor="let movieOption of movies; trackBy: trackMovieById">{{movieOption.title}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

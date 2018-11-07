@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="movie">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <img style="width: 100%;" src="{{cover.large}}" alt="{{movie.title}}">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9">
+                    <h1>{{movie.title}}</h1>
+                    <h3>{{movie.year}}</h3>
+                    <h3 *ngIf="movie.genres.length > 0"><span jhiTranslate="movientsApp.genre.home.title">Genres</span>:
+                        {{joinGenres(movie.genres)}}</h3>
+                    <br/>
+                    <p>{{movie.description}}</p>
+                    <hr/>
+                    <h4>Download in:
+                        <span *ngFor="let torrent of movie.torrents" style="padding-left: 10px; padding-right: 20px;">
+                            <a href="{{torrent.url}}">{{torrent.quality}}</a>
+                        </span>
+                    </h4>
+                    <a href="http://www.yifysubtitles.com/movie-imdb/{{movie.imdbCode}}" target="_blank">Subtitles (all languages)</a>
+                    <br />
+                    <br />
+                    <h4 *ngIf="movie.casts.length > 0">Cast</h4>
+                    <div class="row" *ngIf="movie.casts.length > 0">
+                        <div class="col-xl-6" *ngFor="let cast of movie.casts">
+                            <p>
+                                <a href="https://www.imdb.com/name/nm{{cast.imdb}}">
+                                    <img style="max-width: 20px;" src="{{cast.image}}"
+                                         onerror="this.src='https://img.yts.am/assets/images/actors/thumb/default_avatar.jpg'"
+                                         alt="{{cast.name}}"/>
+                                    {{cast.name}}</a> as {{cast.characterName}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="row justify-content-between">
+                <div class="col" *ngFor="let screenshot of screenshots">
+                    <a href="{{screenshot.large}}" target="_blank"><img style="width: 100%;" src="{{screenshot.medium}}"
+                                                                        alt="{{movie.title}} screenshot"/></a>
+                </div>
+            </div>
+
+            <br/>
+
+            <button type="submit" style="margin-top: 25px;"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button" *jhiHasAnyAuthority="'ROLE_ADMIN'"
+                    [routerLink]="['/movie', movie.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

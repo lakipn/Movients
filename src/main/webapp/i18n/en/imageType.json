@@ -1,0 +1,9 @@
+{
+    "movientsApp": {
+        "ImageType": {
+            "null": "",
+            "COVER": "COVER",
+            "SCREENSHOT": "SCREENSHOT"
+        }
+    }
+}

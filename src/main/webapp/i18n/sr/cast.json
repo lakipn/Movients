@@ -1,0 +1,25 @@
+{
+    "movientsApp": {
+        "cast": {
+            "home": {
+                "title": "Casts",
+                "createLabel": "Kreiraj novi Cast",
+                "createOrEditLabel": "Kreirajte ili izmenite Cast"
+            },
+            "created": "Kreiran je novi Cast pod nazivom {{ param }}",
+            "updated": "Cast pod nazivom {{ param }} je ažuriran",
+            "deleted": "Cast pod nazivom {{ param }} je obrisan",
+            "delete": {
+                "question": "Da li ste sigurni da želite da obrišete Cast pod nazivom {{ id }}?"
+            },
+            "detail": {
+                "title": "Cast"
+            },
+            "name": "Name",
+            "characterName": "Character Name",
+            "image": "Image",
+            "imdb": "Imdb",
+            "movie": "Movie"
+        }
+    }
+}

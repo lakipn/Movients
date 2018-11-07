@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="torrent">
+            <h2><span jhiTranslate="movientsApp.torrent.detail.title">Torrent</span> {{torrent.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="movientsApp.torrent.url">Url</span></dt>
+                <dd>
+                    <span>{{torrent.url}}</span>
+                </dd>
+                <dt><span jhiTranslate="movientsApp.torrent.hash">Hash</span></dt>
+                <dd>
+                    <span>{{torrent.hash}}</span>
+                </dd>
+                <dt><span jhiTranslate="movientsApp.torrent.quality">Quality</span></dt>
+                <dd>
+                    <span>{{torrent.quality}}</span>
+                </dd>
+                <dt><span jhiTranslate="movientsApp.torrent.size">Size</span></dt>
+                <dd>
+                    <span>{{torrent.size}}</span>
+                </dd>
+                <dt><span jhiTranslate="movientsApp.torrent.movie">Movie</span></dt>
+                <dd>
+                    <div *ngIf="torrent.movieId">
+                        <a [routerLink]="['/movie', torrent.movieId, 'view']">{{torrent.movieTitle}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/torrent', torrent.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
